@@ -11,11 +11,13 @@ import { Coordenadas } from '../interfaces/coordenadas';
 })
 export class MapApiComponent implements OnDestroy {
   ListCoor: Coordenadas[] = [];
-  @Input() center : L.LatLngExpression = [21.881381, -102.297014];
+  @Input() center : L.LatLngExpression = [21.910941, -102.316465];
   mapRef: any;
   
   constructor(private renderer: Renderer2, public dbService: DatabaseService) {
     this.loadCoor();
+  }
+  ngOnInit(){
   }
 
   ngOnDestroy(): void {
@@ -24,6 +26,7 @@ export class MapApiComponent implements OnDestroy {
 
   cargaTabla(){
     const mapDiv = document.getElementById('map') as HTMLElement;
+    //this.center = [parseFloat(this.ListCoor[this.ListCoor.length].latitud), parseFloat(this.ListCoor[this.ListCoor.length].longitud)]
     const map = L.map(mapDiv).setView(this.center, 16); 
     this.mapRef = map;
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

@@ -2,9 +2,8 @@
 @import url("https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css");
 
 table{
-    width: 550px;
-    margin: 20px;
-    background-color: rgb(121, 121, 121);
+    width: 30vw;
+    background-color: crimson;
     border-collapse:separate;
     border-spacing: 10;
     border:solid black 1px;
@@ -14,7 +13,6 @@ table{
 }
 
 .contenedor {
-    margin: 20px;
     width: 600px;
 }
 
@@ -37,4 +35,22 @@ table{
     margin: 15px;
 }
 
+input.boton{
+    font-size: 25px;
+    width: 10vw;
+    height: 5vh;
+    color: whitesmoke;
+    border: 2px;
+    border-radius: 10px;
+    border-color: crimson;
+    border-style: dashed;
+    background-color: cornflowerblue;
 
+}
+
+input.boton:hover{
+    border-color: cornflowerblue;
+    border-style: dashed;
+    background-color: crimson;
+
+}
